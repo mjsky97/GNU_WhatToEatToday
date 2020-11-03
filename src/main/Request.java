@@ -5,3 +5,6 @@ public class Request {
 	
 	private void set_request(String text) {}
 }
+
+
+// 필요 없음

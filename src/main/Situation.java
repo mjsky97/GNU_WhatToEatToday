@@ -15,3 +15,5 @@ public class Situation {
 	
 	public void put(Map map) {}
 }
+
+// 필요 없음

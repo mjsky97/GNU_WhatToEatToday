@@ -15,3 +15,6 @@ public class Liquor {
 	
 	public void put(Map map) {}
 }
+
+
+// 필요 없음

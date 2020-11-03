@@ -3,6 +3,8 @@ package main;
 import java.util.Arrays;
 
 public class Restaurants_testcase {
+	
+	// restaurant에 변수 접근자를 private로 바꿔서 오류나는 거니까 알고리즘 다 짜고 이거 수정할예정
 
 	public Restaurants_testcase() {
 		Restaurant[] restaurants = new Restaurant[10];

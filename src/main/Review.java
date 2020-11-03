@@ -6,4 +6,6 @@ public class Review {
 	
 	public void set_review(String text) {}
 	public void set_star_point(int sp) {}
+	
+	// 필요 없음
 }

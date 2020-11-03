@@ -14,3 +14,6 @@ public class Keyword {
 	public String Theme_Category_List [] = {"국밥", "한식", "중식", "양식", "밀면", "분식"};*/
 		
 }
+
+
+// 필요 없음

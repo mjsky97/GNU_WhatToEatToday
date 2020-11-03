@@ -16,7 +16,8 @@ public class Decide_Recommend {
 		
 		else if(user_input.get_Input_2D_list() != null) {
 			// 키워드 추천 함수 호출
-			Recommend_by_Keyword keyword = new Recommend_by_Keyword(user_input);
+			Recommend_by_Keyword keyword = new Recommend_by_Keyword();
+			keyword.
 			
 		}
 		

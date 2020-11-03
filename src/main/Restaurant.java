@@ -6,7 +6,7 @@ public class Restaurant {
 	public String Res_name;
 	public String Res_loca_URL;
 	public Review review;
-	public Keyword keyword;
+	public int [][] keyword;
 	
 	public void set_Res_name(String name) {}
 	public void set_Res_loca_URL(String url) {}

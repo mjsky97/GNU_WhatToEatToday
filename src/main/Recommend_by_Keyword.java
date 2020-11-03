@@ -7,14 +7,12 @@ import java.util.Collections;
 public class Recommend_by_Keyword { // 여기 진행중
 	private Restaurant[] results;
 	
-	public void Re_keyword(User_Input input, Restaurant[] All_list) {
-		
-		results = null;
-		
-		ArrayList<Integer> count = new ArrayList<>(); // 각 음식점의 키워드가 input이랑 몇개나 일치하는지 저장
-		ArrayList<Integer> index_of_Res_list = new ArrayList<>();
-		ArrayList<Integer> column = new ArrayList<>(); // 행 정보를 저장
-		ArrayList<Integer> line = new ArrayList<>();   // 열 정보를 저장
+	public Restaurant [] Re_keyword(User_Input input, Restaurant[] All_list) {
+			
+		ArrayList<Integer> count = new ArrayList<Integer>(); // 각 음식점의 키워드가 input이랑 몇개나 일치하는지 저장
+		ArrayList<Integer> index_of_Res_list = new ArrayList<Integer>();
+		ArrayList<Integer> column = new ArrayList<Integer>(); // 행 정보를 저장
+		ArrayList<Integer> line = new ArrayList<Integer>();   // 열 정보를 저장
 		
 					
 		int [][] input_clone = input.get_Input_2D_list();
@@ -43,21 +41,30 @@ public class Recommend_by_Keyword { // 여기 진행중
 		
 		int max_count = Collections.max(count);
 		
-		while(max_count != 0) {
-			
+		for(int i = 0; i < count.size(); i++) {
 			if(count.indexOf(max_count) == -1) {
+				if(max_count == 0) {
+					break;
+				}
 				max_count = max_count - 1;
 			}
 			
 			int index = count.indexOf(max_count);
+			if(index == -1) {
+				continue;
+			}
 			index_of_Res_list.add(index);
+			count.set(index, 0);
 		}
 		
+		Restaurant [] outputs = new Restaurant[index_of_Res_list.size()];
+		
 		for(int i = 0; i < index_of_Res_list.size(); i++) {
-			results[i] = new Restaurant();
-			results[i] = All_list[index_of_Res_list.get(i)];
+			outputs[i] = new Restaurant();
+			outputs[i] = All_list[index_of_Res_list.get(i)];
 		}
-				
+		
+		return outputs;
 	}
 
 	public Restaurant[] getResults() {

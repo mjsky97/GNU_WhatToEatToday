@@ -3,51 +3,30 @@ package main;
 import java.util.ArrayList;
 import java.util.Collections;
 
+
 public class Main {
 
 	public static void main(String[] args) {
 		
-		ArrayList<Integer> column = new ArrayList(); // 행 정보를 저장
-		ArrayList<Integer> line = new ArrayList();   // 열 정보를 저장
+		Restaurant [] outputs;
 		
-		//int same_matrix_index = 0;
 		
-		/*int [][] test = new int[][] { { 1, 1, 1, 0, 1, 0, 0 }, { 1, 1, 1, 0, 1, 1, 0 },
-			{ 1, 1, 0, 1, 0, 0, 0 }, { 1, 0, 0, 0, 1, 0, 1 } };
+		int [][] input = new int[][] { { 1, 1, 1, 0, 1, 0, 0 }, { 0, 0, 0, 0, 0, 0, 0 },
+			{ 0, 0, 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0, 0, 0 } };
+			
+		User_Input ui = new User_Input();
+		ui.set_Input_2D_list(input);
 		
-			for(int i = 0; i < test.length; i++) {
-				for (int j = 0; j < test[i].length; j++) {
-					if (test[i][j] == 1) {
-						column.add(i);
-						line.add(j);
-					}
-				}
-			}
+		Decide_Recommend dr = new Decide_Recommend(ui);
+
+		dr.decide();
 		
-		for(int i = 0; i < column.size(); i++) {
-			System.out.print("[" + column.get(i) + "," + line.get(i) + "]");
-			System.out.println();
-		}*/
+		outputs = dr.getR_b_K().getResults();
 		
-		column.add(2);
-		column.add(3);
-		column.add(3);
-		column.add(5);
-		column.add(7);
-		column.add(8);
-		column.add(1);
-		column.add(4);
-		column.add(3);
+		System.out.println(outputs[0].getRes_name());
 		
-		System.out.println(column.indexOf(8));
-		
-		System.out.println(Collections.max(column));
-		
-		Collections.sort(column);
-		
-		System.out.println(column.indexOf(8));
-		
-		System.out.println(column.isEmpty());
 	}
+		
+		
 
 }

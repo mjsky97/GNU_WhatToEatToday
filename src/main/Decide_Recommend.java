@@ -16,8 +16,11 @@ public class Decide_Recommend {
 		
 		else if(user_input.get_Input_2D_list() != null) {
 			// 키워드 추천 함수 호출
+			Restaurants_testcase rt = new Restaurants_testcase();
+			Manage_Restaurants_Data mrd = new Manage_Restaurants_Data(rt);
+			
 			Recommend_by_Keyword keyword = new Recommend_by_Keyword();
-			keyword.
+			keyword.Re_keyword(this.user_input, mrd.getRestauratn_list());
 			
 		}
 		

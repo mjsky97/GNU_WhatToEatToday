@@ -4,6 +4,7 @@ import java.util.Arrays;
 
 public class Restaurants_testcase {
 	
+	private Restaurant[] restaurants;
 	// restaurant에 변수 접근자를 private로 바꿔서 오류나는 거니까 알고리즘 다 짜고 이거 수정할예정
 
 	public Restaurants_testcase() {
@@ -12,46 +13,79 @@ public class Restaurants_testcase {
 		for (int i = 0; i < restaurants.length; i++) {
 			restaurants[i] = new Restaurant();
 		}
+		
+		
+		int [][] zero = new int[][] { { 1, 1, 1, 0, 1, 0, 0 }, { 1, 1, 1, 0, 1, 1, 0 },
+			{ 1, 1, 0, 1, 0, 0, 0 }, { 1, 0, 0, 0, 1, 0, 1 } };
+			
+		int [][] one = new int[][] { { 1, 1, 1, 0, 1, 0, 0 }, { 1, 0, 1, 0, 1, 0, 0 },
+			{ 1, 1, 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0, 0, 0 } };
+			
+		int [][] two = new int[][] { { 1, 1, 1, 0, 1, 0, 0 }, { 1, 0, 1, 0, 0, 0, 0 },
+			{ 1, 1, 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0, 0, 0 } };
+			
+		int [][] three = new int[][] { { 0, 0, 0, 0, 0, 0, 0 }, { 1, 0, 1, 0, 1, 1, 1 },
+			{ 0, 0, 0, 0, 0, 0, 0 }, { 1, 0, 1, 1, 0, 1, 1 } };
+			
+		int [][] four = new int[][] { { 0, 0, 0, 0, 0, 0, 0 }, { 1, 0, 1, 0, 1, 1, 0 },
+			{ 0, 0, 0, 0, 0, 0, 0 }, { 1, 0, 1, 0, 1, 1, 1 } };
+			
+		int [][] five = new int[][] { { 1, 1, 1, 0, 1, 0, 0 }, { 1, 0, 1, 1, 0, 0, 0 },
+			{ 1, 1, 0, 1, 0, 0, 0 }, { 1, 0, 0, 0, 1, 0, 1 } };
 
-		restaurants[0].Res_name = "조커닭";
-		restaurants[0].keyword = new int[][] { { 1, 1, 1, 0, 1, 0, 0 }, { 1, 1, 1, 0, 1, 1, 0 },
-				{ 1, 1, 0, 1, 0, 0, 0 }, { 1, 0, 0, 0, 1, 0, 1 } };
+		int [][] six = new int[][] { { 1, 1, 1, 0, 1, 0, 0 }, { 1, 0, 1, 0, 0, 0, 0 },
+			{ 1, 1, 0, 1, 0, 0, 0 }, { 1, 0, 0, 0, 1, 0, 0 } };
 
-		restaurants[1].Res_name = "아웃닭";
-		restaurants[1].keyword = new int[][] { { 1, 1, 1, 0, 1, 0, 0 }, { 1, 0, 1, 0, 1, 0, 0 },
-				{ 1, 1, 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0, 0, 0 } };
+		int [][] seven = new int[][] { { 1, 1, 1, 0, 0, 0, 0 }, { 1, 1, 1, 1, 0, 1, 1 },
+			{ 0, 0, 0, 0, 0, 0, 0 }, { 1, 0, 0, 0, 1, 0, 0 } };
+			
+		int [][] eight = new int[][] { { 1, 1, 1, 0, 1, 0, 0 }, { 1, 1, 1, 1, 1, 1, 1 },
+			{ 1, 1, 0, 0, 0, 0, 0 }, { 1, 0, 1, 1, 1, 0, 1 } };
+			
+		int [][] nine = new int[][] { { 1, 1, 1, 0, 1, 0, 0 }, { 1, 0, 1, 0, 1, 0, 0 },
+			{ 1, 1, 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0, 0, 0 } };
+			
+		
+		
+		restaurants[0].setRes_name("조커닭");
+		restaurants[0].setKeyword(zero);
+		
+		restaurants[1].setRes_name("아웃닭");
+		restaurants[1].setKeyword(one);
+		
+		restaurants[2].setRes_name("BHC");
+		restaurants[2].setKeyword(two);
+		
+		restaurants[3].setRes_name("국수나무");
+		restaurants[3].setKeyword(three);
+		
+		restaurants[4].setRes_name("고봉민");
+		restaurants[4].setKeyword(four);
+		
+		restaurants[5].setRes_name("욜로");
+		restaurants[5].setKeyword(five);
+		
+		restaurants[6].setRes_name("상남자키친");
+		restaurants[6].setKeyword(six);
+		
+		restaurants[7].setRes_name("비날");
+		restaurants[7].setKeyword(seven);
+		
+		restaurants[8].setRes_name("핑청");
+		restaurants[8].setKeyword(eight);
+		
+		restaurants[9].setRes_name("수복포차");
+		restaurants[9].setKeyword(nine);
+		
+		this.restaurants = restaurants;
+	}
 
-		restaurants[2].Res_name = "BHC";
-		restaurants[2].keyword = new int[][] { { 1, 1, 1, 0, 1, 0, 0 }, { 1, 0, 1, 0, 0, 0, 0 },
-				{ 1, 1, 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0, 0, 0 } };
+	public Restaurant[] getRestaurants() {
+		return restaurants;
+	}
 
-		restaurants[3].Res_name = "국수나무";
-		restaurants[3].keyword = new int[][] { { 0, 0, 0, 0, 0, 0, 0 }, { 1, 0, 1, 0, 1, 1, 1 },
-				{ 0, 0, 0, 0, 0, 0, 0 }, { 1, 0, 1, 1, 0, 1, 1 } };
-
-		restaurants[4].Res_name = "고봉민";
-		restaurants[4].keyword = new int[][] { { 0, 0, 0, 0, 0, 0, 0 }, { 1, 0, 1, 0, 1, 1, 0 },
-				{ 0, 0, 0, 0, 0, 0, 0 }, { 1, 0, 1, 0, 1, 1, 1 } };
-
-		restaurants[5].Res_name = "욜로";
-		restaurants[5].keyword = new int[][] { { 1, 1, 1, 0, 1, 0, 0 }, { 1, 0, 1, 1, 0, 0, 0 },
-				{ 1, 1, 0, 1, 0, 0, 0 }, { 1, 0, 0, 0, 1, 0, 1 } };
-
-		restaurants[6].Res_name = "상남자키친";
-		restaurants[6].keyword = new int[][] { { 1, 1, 1, 0, 1, 0, 0 }, { 1, 0, 1, 0, 0, 0, 0 },
-				{ 1, 1, 0, 1, 0, 0, 0 }, { 1, 0, 0, 0, 1, 0, 0 } };
-
-		restaurants[7].Res_name = "비날";
-		restaurants[7].keyword = new int[][] { { 1, 1, 1, 0, 0, 0, 0 }, { 1, 1, 1, 1, 0, 1, 1 },
-				{ 0, 0, 0, 0, 0, 0, 0 }, { 1, 0, 0, 0, 1, 0, 0 } };
-
-		restaurants[8].Res_name = "핑청";
-		restaurants[8].keyword = new int[][] { { 1, 1, 1, 0, 1, 0, 0 }, { 1, 1, 1, 1, 1, 1, 1 },
-				{ 1, 1, 0, 0, 0, 0, 0 }, { 1, 0, 1, 1, 1, 0, 1 } };
-
-		restaurants[9].Res_name = "수복포차";
-		restaurants[9].keyword = new int[][] { { 1, 1, 1, 0, 1, 0, 0 }, { 1, 0, 1, 0, 1, 0, 0 },
-				{ 1, 1, 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0, 0, 0 } };
+	public void setRestaurants(Restaurant[] restaurants) {
+		this.restaurants = restaurants;
 	}
 
 }

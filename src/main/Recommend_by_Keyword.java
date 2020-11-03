@@ -5,11 +5,11 @@ import java.util.Collections;
 
 
 public class Recommend_by_Keyword { // 여기 진행중
-	public Restaurant[] Result;
+	private Restaurant[] results;
 	
-	public Restaurant[] Re_keyword(User_Input input, Restaurant[] All_list) {
+	public void Re_keyword(User_Input input, Restaurant[] All_list) {
 		
-		Restaurant[] results = null;
+		results = null;
 		
 		ArrayList<Integer> count = new ArrayList<>(); // 각 음식점의 키워드가 input이랑 몇개나 일치하는지 저장
 		ArrayList<Integer> index_of_Res_list = new ArrayList<>();
@@ -44,13 +44,28 @@ public class Recommend_by_Keyword { // 여기 진행중
 		int max_count = Collections.max(count);
 		
 		while(max_count != 0) {
-			if()
+			
+			if(count.indexOf(max_count) == -1) {
+				max_count = max_count - 1;
+			}
+			
 			int index = count.indexOf(max_count);
 			index_of_Res_list.add(index);
 		}
 		
+		for(int i = 0; i < index_of_Res_list.size(); i++) {
+			results[i] = new Restaurant();
+			results[i] = All_list[index_of_Res_list.get(i)];
+		}
+				
+	}
+
+	public Restaurant[] getResults() {
 		return results;
-		
+	}
+
+	public void setResults(Restaurant[] results) {
+		this.results = results;
 	}
 
 }

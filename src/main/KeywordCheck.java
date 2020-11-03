@@ -1,7 +1,7 @@
 package main;
 
 public class KeywordCheck {
-	
+	// 필요없음
 	private Keyword keyword;
 	private int [][] input_2D_list;
 	

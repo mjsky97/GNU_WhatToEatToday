@@ -23,7 +23,13 @@ public class Main {
 		
 		outputs = dr.getR_b_K().getResults();
 		
-		System.out.println(outputs[0].getRes_name());
+		for(int i = 0; i < outputs.length; i++) {
+			System.out.println(outputs[i].getRes_name());
+		}
+		
+		Keyword keyword = new Keyword();
+		
+		
 		
 	}
 		

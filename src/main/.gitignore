@@ -17,3 +17,10 @@
 /Restaurants.class
 /Restaurants_testcase.class
 /Manage_Restaurants_Data.class
+/DecideRecommend.class
+/RecommendByKeyword.class
+/RecommendRandom.class
+/RecommendBySearchword.class
+/UserInput.class
+/RecommendResaurantList.class
+/ManageRestaurantsData.class

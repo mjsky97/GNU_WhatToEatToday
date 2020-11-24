@@ -14,14 +14,14 @@ public class Main {
 		int [][] input = new int[][] { { 1, 1, 1, 0, 1, 0, 0 }, { 0, 0, 0, 0, 0, 0, 0 },
 			{ 0, 0, 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0, 0, 0 } };
 			
-		User_Input ui = new User_Input();
-		ui.set_Input_2D_list(input);
+		UserInput ui = new UserInput();
+		ui.setinput2Dlist(input);
 		
-		Decide_Recommend dr = new Decide_Recommend(ui);
+		DecideRecommend dr = new DecideRecommend(ui);
 
 		dr.decide();
 		
-		outputs = dr.getR_b_K().getResults();
+		outputs = dr.getRbK().getResults();
 		
 		for(int i = 0; i < outputs.length; i++) {
 			System.out.println(outputs[i].getRes_name());

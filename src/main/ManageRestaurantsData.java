@@ -8,11 +8,11 @@ public class ManageRestaurantsData {
 		restaurantlist = rt.getRestaurants();
 	}
 
-	public Restaurant[] getRestauratn_list() {
+	public Restaurant[] getRestaurantlist() {
 		return restaurantlist;
 	}
 
-	public void setRestauratn_list(Restaurant[] restauratnlist) {
+	public void setRestaurantlist(Restaurant[] restauratnlist) {
 		this.restaurantlist = restauratnlist;
 	}
 	

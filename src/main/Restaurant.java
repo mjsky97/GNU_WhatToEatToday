@@ -3,30 +3,23 @@ package main;
 import java.util.Map;
 
 public class Restaurant {
-	private String Res_name;
-	private String Res_loca_URL;
+	private String restaurantName;
+	private String restaurantLocationURL;
 	private Review review;
-	private int star_point;
+	private int starpoint;
 	private int [][] keyword;
-	
-	public void set_Res_name(String name) {}
-	public void set_Res_loca_URL(String url) {}
-	public void set_keyword(Map map) {}
-	public Review get_review() {
-		Review re = new Review();
-		return re;
+	private int number;
+	public String getRestaurantName() {
+		return restaurantName;
 	}
-	public String getRes_name() {
-		return Res_name;
+	public void setRestaurantName(String restaurantName) {
+		this.restaurantName = restaurantName;
 	}
-	public void setRes_name(String res_name) {
-		Res_name = res_name;
+	public String getRestaurantLocationURL() {
+		return restaurantLocationURL;
 	}
-	public String getRes_loca_URL() {
-		return Res_loca_URL;
-	}
-	public void setRes_loca_URL(String res_loca_URL) {
-		Res_loca_URL = res_loca_URL;
+	public void setRestaurantLocationURL(String restaurantLocationURL) {
+		this.restaurantLocationURL = restaurantLocationURL;
 	}
 	public Review getReview() {
 		return review;
@@ -34,16 +27,24 @@ public class Restaurant {
 	public void setReview(Review review) {
 		this.review = review;
 	}
+	public int getStarpoint() {
+		return starpoint;
+	}
+	public void setStarpoint(int starpoint) {
+		this.starpoint = starpoint;
+	}
 	public int[][] getKeyword() {
 		return keyword;
 	}
 	public void setKeyword(int[][] keyword) {
 		this.keyword = keyword;
 	}
-	public int getStar_point() {
-		return star_point;
+	public int getNumber() {
+		return number;
 	}
-	public void setStar_point(int star_point) {
-		this.star_point = star_point;
+	public void setNumber(int number) {
+		this.number = number;
 	}
+	
+	
 }

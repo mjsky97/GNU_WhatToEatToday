@@ -1,4 +1,4 @@
-package main;
+/*package main;
 
 public class KeywordCheck {
 	// 필요없음
@@ -48,4 +48,4 @@ public class KeywordCheck {
 		return keyword;
 		
 	}
-}
+}*/

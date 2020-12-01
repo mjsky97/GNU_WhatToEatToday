@@ -3,6 +3,12 @@ package main;
 import java.util.ArrayList;
 import java.util.Collections;
 
+/*
+
+2차원 배열이 input으로 들어옴
+배열의 요소 중 같은 위치에 1을 포함하는 결과만 출력
+
+*/
 
 public class RecommendByKeyword implements RecommendResaurantList{
 	

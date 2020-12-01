@@ -9,6 +9,7 @@ public class Restaurant {
 	private int starpoint;
 	private int [][] keyword;
 	private int number;
+	
 	public String getRestaurantName() {
 		return restaurantName;
 	}

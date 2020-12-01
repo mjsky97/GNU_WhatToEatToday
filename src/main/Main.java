@@ -71,7 +71,7 @@ public class Main {
 		System.out.println("START POINT OF SEARCH BY SEARCHWORD");
 		
 		UserInput ui_2 = new UserInput();
-		ui_2.setSearchword("´ß");
+		ui_2.setSearchword("Æ÷Â÷");
 		
 		RecommendBySearchword search = new RecommendBySearchword();
 		search.setUserInput(ui_2);
@@ -90,7 +90,7 @@ public class Main {
 			
 		}
 		
-		System.out.println("END POINT OF RECOMMEND RANDOM");
+		System.out.println("END POINT OF SEARCH BY SEARCHWORD");
 		
 	}
 	

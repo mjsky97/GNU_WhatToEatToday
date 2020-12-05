@@ -2,7 +2,8 @@ package main;
 
 import java.util.ArrayList;
 import java.util.Collections;
-
+import java.util.Map;
+import java.util.Map.Entry;
 
 public class Main {
 
@@ -11,6 +12,7 @@ public class Main {
 		Restaurant [] outputs1;
 		Restaurant [] outputs2;
 		Restaurant [] outputs3;
+		Restaurant [] outputs4;
 		
 		
 		int [][] input = new int[][] { { 1, 1, 1, 0, 1, 0, 0 }, { 0, 0, 0, 0, 0, 0, 0 },
@@ -92,6 +94,44 @@ public class Main {
 		
 		System.out.println("END POINT OF SEARCH BY SEARCHWORD");
 		
+		
+		System.out.println();
+		System.out.println("---------------------------------");
+		System.out.println("---------------------------------");
+		System.out.println();
+		
+		
+		System.out.println("START POINT OF RECOMMEND BY KEYWORD MAP");
+		
+		UserInput ui_3 = new UserInput();
+		String [] testkeyword = {"µ•¿Ã∆Æ"};
+		ui_3.setInputKeyword(testkeyword);
+		
+		RecommendByKeywordMap km = new RecommendByKeywordMap();
+		km.setUserInput(ui_3);
+		km.listOfRecommendedList(mrd.getRestaurantlist());
+		
+		outputs4 = km.getResults();
+		
+		if(outputs4.length == 0) {
+			System.out.println("There's no results");
+		}
+		else {
+			
+			for(int i = 0; i < outputs4.length; i++) {
+				System.out.println(outputs4[i].getRestaurantName());
+			}	
+			
+		}
+		
+		System.out.println("START POINT OF RECOMMEND BY KEYWORD MAP");
+		
+		/*for(Map.Entry<String, Integer> element : mrd.getRestaurantlist()[0].getKeyword().getMap().entrySet()) {
+			String key = element.getKey();
+			int value = element.getValue();
+			System.out.println(key + value);
+		}*/
+						
 	}
-	
+
 }

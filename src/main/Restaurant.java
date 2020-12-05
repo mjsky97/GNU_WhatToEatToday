@@ -5,9 +5,11 @@ import java.util.Map;
 public class Restaurant {
 	private String restaurantName;
 	private String restaurantLocationURL;
+	private Keyword keyword = new Keyword();
 	private Review review;
 	private int starpoint;
-	private int [][] keyword;
+	private int [][] keyword2D;
+		
 	private int number;
 	
 	public String getRestaurantName() {
@@ -34,11 +36,17 @@ public class Restaurant {
 	public void setStarpoint(int starpoint) {
 		this.starpoint = starpoint;
 	}
-	public int[][] getKeyword() {
+	public Keyword getKeyword() {
 		return keyword;
 	}
-	public void setKeyword(int[][] keyword) {
+	public void setKeyword2D(Keyword keyword) {
 		this.keyword = keyword;
+	}
+	public int[][] getKeyword2D() {
+		return keyword2D;
+	}
+	public void setKeyword2D(int[][] keyword2d) {
+		keyword2D = keyword2d;
 	}
 	public int getNumber() {
 		return number;

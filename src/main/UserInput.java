@@ -3,7 +3,14 @@ package main;
 public class UserInput {
 	private String searchword;
 	private int [][] input2Dlist;
+	private String [] inputKeywords;
 	
+	public String[] getInputKeyword() {
+		return inputKeywords;
+	}
+	public void setInputKeyword(String[] inputKeywords) {
+		this.inputKeywords = inputKeywords;
+	}
 	public String getSearchword() {
 		return searchword;
 	}

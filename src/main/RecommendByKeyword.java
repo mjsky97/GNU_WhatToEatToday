@@ -36,7 +36,7 @@ public class RecommendByKeyword implements RecommendResaurantList{
 		
 		for(int i = 0; i < allOfRestaurantList.length; i++) {
 			for(int j = 0; j < column.size(); j++) {
-				if(allOfRestaurantList[i].getKeyword()[column.get(j)][line.get(j)] == 1) {
+				if(allOfRestaurantList[i].getKeyword2D()[column.get(j)][line.get(j)] == 1) {
 					same = same + 1;
 				}
 			}

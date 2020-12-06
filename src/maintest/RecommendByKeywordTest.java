@@ -5,7 +5,7 @@ import static org.junit.Assert.*;
 import org.junit.Test;
 
 import main.ManageRestaurantsData;
-import main.RecommendByKeyword;
+import main.CompareByKeyword;
 import main.Restaurant;
 import main.Restaurants_testcase;
 import main.UserInput;
@@ -28,7 +28,7 @@ public class RecommendByKeywordTest {
 		UserInput ui_1 = new UserInput();
 		ui_1.setinput2Dlist(input);
 		
-		RecommendByKeyword keyword = new RecommendByKeyword();
+		CompareByKeyword keyword = new CompareByKeyword();
 		keyword.setUserInput(ui_1);
 		keyword.listOfRecommendedList(mrd.getRestaurantlist());
 		

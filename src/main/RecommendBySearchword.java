@@ -1,51 +1,29 @@
 package main;
 
-import java.util.ArrayList;
-
-/*
-
- 검색어가 input으로 들어옴
- 이 검색어를 포함하는 결과만 출력
- 
-*/
-
-public class RecommendBySearchword {
+public class RecommendBySearchword implements RecommendRestaurants {
 	
 	private Restaurant[] results;
 	private UserInput userInput;
 	
-	public void listOfRecommendedList(Restaurant[] allOfRestaurantList) {
- 		
-		String [] arrayOfInputtedWord = userInput.getSearchword().split(""); // 한글자씩 나눔(split)
+	public void RecommendRestaurantsList() {
 		
-		ArrayList<Integer> indexOfMatchedRestaurant = new ArrayList<Integer>(); // 결과를 저장할 List
+		Restaurant [] outputs;
 		
-		for(int i = 0; i < allOfRestaurantList.length; i++) {		// 모든 Restaurant 갯수만큼 반복
-			
-			int count = 0;		// 한 글자 포함 여부 갯수를 셀 변수
-			
-			for(int j = 0; j < arrayOfInputtedWord.length; j++) {		// input으로 들어온 문자열의 글 갯수만큼 반복	
-				
-				if(allOfRestaurantList[i].getRestaurantName().contains(arrayOfInputtedWord[j])) {
-					count ++;
-				}		// 글자를 포함하면 count를 1 올림
-				
-				if(count == arrayOfInputtedWord.length) {
-					indexOfMatchedRestaurant.add(i);
-				}		// 음식점 이름에 대하여 count와 input으로 들어온 String의 배열 길이와 같으면(=검색어를 모두 포함) 
-			}
-		}
-
-		Restaurant [] outputs = new Restaurant[indexOfMatchedRestaurant.size()];
+		Restaurants_testcase rt = new Restaurants_testcase(); // 테스트케이스 객체생성
+		ManageRestaurantsData mrd = new ManageRestaurantsData(rt); // 테스트케이스에 있는 음식점 배열을 가져오는 부분
 		
-		for(int i = 0; i < indexOfMatchedRestaurant.size(); i++) {
-			outputs[i] = new Restaurant();
-			outputs[i] = allOfRestaurantList[indexOfMatchedRestaurant.get(i)];
-			
+		CompareBySearchword search = new CompareBySearchword();
+		search.setUserInput(this.userInput);
+		search.compare(mrd.getRestaurantlist());
+		
+		outputs = search.getResults();
+		
+		if(outputs.length == 0) {
+			System.out.println("There's no results");
 		}
 		
 		this.results = outputs;
-		
+			
 	}
 
 	public Restaurant[] getResults() {
@@ -63,4 +41,5 @@ public class RecommendBySearchword {
 	public void setUserInput(UserInput userInput) {
 		this.userInput = userInput;
 	}
+
 }

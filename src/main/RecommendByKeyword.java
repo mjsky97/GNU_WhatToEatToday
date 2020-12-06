@@ -1,75 +1,28 @@
 package main;
 
-import java.util.ArrayList;
-import java.util.Collections;
-
-/*
-
-2차원 배열이 input으로 들어옴
-배열의 요소 중 같은 위치에 1을 포함하는 결과만 출력
-
-*/
-
-public class RecommendByKeyword implements RecommendResaurantList{
+public class RecommendByKeyword implements RecommendRestaurants {
 	
 	private Restaurant[] results;
 	private UserInput userInput;
 	
-	public void listOfRecommendedList(Restaurant[] allOfRestaurantList) {
-			
-		ArrayList<Integer> count = new ArrayList<Integer>(); // 각 음식점의 키워드가 input이랑 몇개나 일치하는지 저장
-		ArrayList<Integer> indexOfRestaurantList = new ArrayList<Integer>();
-		ArrayList<Integer> column = new ArrayList<Integer>(); // 행 정보를 저장
-		ArrayList<Integer> line = new ArrayList<Integer>();   // 열 정보를 저장
-					
-		int same = 0;
+	public void RecommendRestaurantsList() {
+		Restaurant [] outputs;
 		
-		for(int i = 0; i < userInput.getinput2Dlist().length; i++) {
-			for (int j = 0; j < userInput.getinput2Dlist()[i].length; j++) {
-				if (userInput.getinput2Dlist()[i][j] == 1) {
-					column.add(i);
-					line.add(j);
-				}
-			}
-		} // input으로 들어온 2차원배열의 1의 index 들을 저장
-
+		Restaurants_testcase rt = new Restaurants_testcase(); // 테스트케이스 객체생성
+		ManageRestaurantsData mrd = new ManageRestaurantsData(rt); // 테스트케이스에 있는 음식점 배열을 가져오는 부분
+				
+		CompareByKeyword km = new CompareByKeyword(); //비교하는 알고리즘이 있는 객체 생성
+		km.setUserInput(this.userInput); // 객체에다가 input을 할당
+		km.compare(mrd.getRestaurantlist()); // 모든 음식점 리스트를 가져와서 비교 메소드 실행
 		
-		for(int i = 0; i < allOfRestaurantList.length; i++) {
-			for(int j = 0; j < column.size(); j++) {
-				if(allOfRestaurantList[i].getKeyword2D()[column.get(j)][line.get(j)] == 1) {
-					same = same + 1;
-				}
-			}
-			count.add(same);
-			same = 0;
-		}  // 각 음식점이 가지고 있는 키워드가 input과 몇개나 일치하는지 확인 후 저장
+		outputs = km.getResults(); // 결과(Restaurant [])->ArrayList 바꿀순 있음
 		
-		int maximumOfCountList = Collections.max(count);
-		
-		for(int i = 0; i < count.size(); i++) {
-			if(count.indexOf(maximumOfCountList) == -1) {
-				if(maximumOfCountList == 0) {
-					break;
-				}
-				maximumOfCountList = maximumOfCountList - 1;
-			}
-			
-			int index = count.indexOf(maximumOfCountList);
-			if(index == -1) {
-				continue;
-			}
-			indexOfRestaurantList.add(index);
-			count.set(index, 0);
-		}
-		
-		Restaurant [] outputs = new Restaurant[indexOfRestaurantList.size()];
-		
-		for(int i = 0; i < indexOfRestaurantList.size(); i++) {
-			outputs[i] = new Restaurant();
-			outputs[i] = allOfRestaurantList[indexOfRestaurantList.get(i)];
+		if(outputs.length == 0) {
+			System.out.println("There's no results");
 		}
 		
 		this.results = outputs;
+		
 	}
 
 	public Restaurant[] getResults() {
@@ -79,7 +32,7 @@ public class RecommendByKeyword implements RecommendResaurantList{
 	public void setResults(Restaurant[] results) {
 		this.results = results;
 	}
-	
+
 	public UserInput getUserInput() {
 		return userInput;
 	}
@@ -87,4 +40,5 @@ public class RecommendByKeyword implements RecommendResaurantList{
 	public void setUserInput(UserInput userInput) {
 		this.userInput = userInput;
 	}
+
 }

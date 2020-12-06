@@ -5,7 +5,7 @@ import static org.junit.Assert.*;
 import org.junit.Test;
 
 import main.ManageRestaurantsData;
-import main.RecommendRandom;
+import main.CompareRandom;
 import main.Restaurant;
 import main.Restaurants_testcase;
 
@@ -77,7 +77,7 @@ public class RecommendRandomTest {
 		Restaurants_testcase rt = new Restaurants_testcase();
 		ManageRestaurantsData mrd = new ManageRestaurantsData(rt);
 		
-		RecommendRandom random = new RecommendRandom();
+		CompareRandom random = new CompareRandom();
 		random.listOfRecommendedList(mrd.getRestaurantlist());
 		outputs2 = random.getResults();
 		

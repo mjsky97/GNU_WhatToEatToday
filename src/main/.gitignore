@@ -25,3 +25,10 @@
 /RecommendResaurantList.class
 /ManageRestaurantsData.class
 /RecommendByKeywordMap.class
+/CompareUserInputandResaurantList.class
+/CompareByKeyword.class
+/CompareByKeywordMap.class
+/CompareBySearchword.class
+/CompareRandom.class
+/ExtractRandom.class
+/RecommendRestaurants.class

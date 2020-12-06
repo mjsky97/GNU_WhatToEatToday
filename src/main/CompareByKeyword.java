@@ -5,12 +5,12 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 
-public class RecommendByKeywordMap implements RecommendResaurantList {
+public class CompareByKeyword implements CompareUserInputandResaurantList {
 	
 	private Restaurant[] results;
 	private UserInput userInput;
 	
-	public void listOfRecommendedList(Restaurant[] allOfRestaurantList) {
+	public void compare(Restaurant[] allOfRestaurantList) {
 		
 		String [] cloneOfInputKeywords = userInput.getInputKeyword(); // 입력한 문자열을 받음
 		
@@ -20,7 +20,7 @@ public class RecommendByKeywordMap implements RecommendResaurantList {
 			
 			int same = 0;
 			
-			Map cloneOfMap = allOfRestaurantList[i].getKeyword().getMap(); // 음식점 맵 변수 비교를 위한 복제
+			Map<String, Integer> cloneOfMap = allOfRestaurantList[i].getKeyword().getMap(); // 음식점 맵 변수 비교를 위한 복제
 						
 			for(int j = 0; j < cloneOfInputKeywords.length; j++) {
 				

@@ -5,7 +5,7 @@ import static org.junit.Assert.*;
 import org.junit.Test;
 
 import main.ManageRestaurantsData;
-import main.RecommendBySearchword;
+import main.CompareBySearchword;
 import main.Restaurant;
 import main.Restaurants_testcase;
 import main.UserInput;
@@ -24,7 +24,7 @@ public class RecommendBySearchwordTest {
 		UserInput ui_2 = new UserInput();
 		ui_2.setSearchword("Æ÷Â÷");
 		
-		RecommendBySearchword search = new RecommendBySearchword();
+		CompareBySearchword search = new CompareBySearchword();
 		search.setUserInput(ui_2);
 		search.listOfRecommendedList(mrd.getRestaurantlist());
 		

@@ -61,9 +61,9 @@ public class Main {
 		System.out.println("START POINT OF RECOMMEND BY KEYWORD MAP");
 		
 		UserInput ui_3 = new UserInput();
-		String [] testkeyword = {"데이트", "소주", "맥주", "치킨"}; // Userinput
-		ui_3.setInputKeyword(testkeyword); // UserInput에다가 String배열을 할당
-		
+		String [] testkeyword = {"회식"}; // Userinput
+		ui_3.putInputKeywords(testkeyword[0]); // UserInput에다가 String배열을 할당
+	
 		RecommendByKeyword rk = new RecommendByKeyword();
 		rk.setUserInput(ui_3);
 		rk.RecommendRestaurantsList();

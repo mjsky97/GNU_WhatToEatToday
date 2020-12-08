@@ -1,29 +1,37 @@
 package main;
 
+import java.util.ArrayList;
+
 public class UserInput {
-	private String searchword;
-	private int [][] input2Dlist;
-	private String [] inputKeywords;
+	private static String searchword;
+	private static ArrayList<String> inputKeywords = new ArrayList<String>();
 	
-	public String[] getInputKeyword() {
+	public ArrayList<String> getInputKeywords() {
 		return inputKeywords;
 	}
-	public void setInputKeyword(String[] inputKeywords) {
-		this.inputKeywords = inputKeywords;
+	
+	public void setInputKeywords(ArrayList<String> inputKeywords) {
+		UserInput.inputKeywords = inputKeywords;
 	}
+	
+	public void putInputKeywords(String inputKeywords) {
+		UserInput.inputKeywords.add(inputKeywords);
+	}
+	
+	public void deleteInputKeywords(String keywords) {
+		UserInput.inputKeywords.remove(keywords);
+	}
+	
+	public void clearInputKeywords() {
+		UserInput.inputKeywords.clear();
+	}
+	
 	public String getSearchword() {
 		return searchword;
 	}
+	
 	public void setSearchword(String search_word) {
-		this.searchword = search_word;
+		UserInput.searchword = search_word;
 	}
-	public int[][] getinput2Dlist() {
-		return input2Dlist;
-	}
-	public void setinput2Dlist(int[][] input2dlist) {
-		input2Dlist = input2dlist;
-	}
-		
-	
-	
+
 }

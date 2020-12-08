@@ -12,7 +12,7 @@ public class CompareByKeyword implements CompareUserInputandResaurantList {
 	
 	public void compare(Restaurant[] allOfRestaurantList) {
 		
-		String [] cloneOfInputKeywords = userInput.getInputKeyword(); // 입력한 문자열을 받음
+		ArrayList<String> cloneOfInputKeywords = userInput.getInputKeywords(); // 입력한 문자열을 받음
 		
 		ArrayList<Restaurant> matchedRestaurants = new ArrayList<Restaurant>(); // 결과를 저장할 List
 					
@@ -22,13 +22,13 @@ public class CompareByKeyword implements CompareUserInputandResaurantList {
 			
 			Map<String, Integer> cloneOfMap = allOfRestaurantList[i].getKeyword().getMap(); // 음식점 맵 변수 비교를 위한 복제
 						
-			for(int j = 0; j < cloneOfInputKeywords.length; j++) {
+			for(int j = 0; j < cloneOfInputKeywords.size(); j++) {
 				
-				if((int)cloneOfMap.get(cloneOfInputKeywords[j]) == 1) {
+				if((int)cloneOfMap.get(cloneOfInputKeywords.get(j)) == 1) {
 					same ++;
 				} // 음식점 키워드 중 입력받은 문자열에 해당한는 부분이 1이면
 				
-				if(same == cloneOfInputKeywords.length) {
+				if(same == cloneOfInputKeywords.size()) {
 					matchedRestaurants.add(allOfRestaurantList[i]);
 				} // 입력받은 문자열의 길이와 음식점의 키워드가 1 인 갯수가 일치하면 결과에 추가
 			}

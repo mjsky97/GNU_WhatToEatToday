@@ -25,12 +25,18 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+            Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+            Intent intent1 = new Intent(getApplicationContext(), ResListRandomActivity.class);
             switch (item.getItemId()) {
+
                 case R.id.navigation_home:
-                    mTextMessage.setText(R.string.title_home);
+                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                    startActivity(intent);
+//                    mTextMessage.setText(R.string.title_home);
                     return true;
                 case R.id.navigation_dashboard:
-                    mTextMessage.setText(R.string.title_dashboard);
+                    startActivity(intent1);
+//                    mTextMessage.setText(R.string.title_dashboard);
                     return true;
             }
             return false;

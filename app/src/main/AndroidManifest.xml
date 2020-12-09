@@ -33,6 +33,7 @@
         <activity android:name=".ResInfoActivity"/>
         <activity android:name=".AddReviewActivity"/>
         <activity android:name=".ResListSearchActivity"/>
+        <activity android:name=".ResListRandomActivity"/>
     </application>
 
 </manifest>

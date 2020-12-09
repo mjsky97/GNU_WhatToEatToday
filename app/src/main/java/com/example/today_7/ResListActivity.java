@@ -5,6 +5,8 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -30,17 +32,24 @@ public class ResListActivity extends AppCompatActivity implements View.OnClickLi
 
     private ArrayList<Restaurant> res;
 
+
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
 
         @Override
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+            Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+            Intent intent1 = new Intent(getApplicationContext(), ResListRandomActivity.class);
             switch (item.getItemId()) {
+
                 case R.id.navigation_home:
-                    mTextMessage.setText(R.string.title_home);
+                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                    startActivity(intent);
+//                    mTextMessage.setText(R.string.title_home);
                     return true;
                 case R.id.navigation_dashboard:
-                    mTextMessage.setText(R.string.title_dashboard);
+                    startActivity(intent1);
+//                    mTextMessage.setText(R.string.title_dashboard);
                     return true;
             }
             return false;
@@ -52,8 +61,6 @@ public class ResListActivity extends AppCompatActivity implements View.OnClickLi
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_res_list);
 
-
-
         UserInput userinput = new UserInput();
 //        String [] keyword = {"회식"};
 //        userinput.setInputKeyword(keyword);
@@ -64,16 +71,6 @@ public class ResListActivity extends AppCompatActivity implements View.OnClickLi
         rk.RecommendRestaurantsList();
 
         Restaurant[] outputs4 = rk.getResults();
-
-
-
-//        Restaurant [] outputs;
-//
-//        decide_recommend.decide();
-//
-//        outputs = decide_recommend.getR_b_K().getResults();
-
-
 
 
 
@@ -90,7 +87,10 @@ public class ResListActivity extends AppCompatActivity implements View.OnClickLi
         adapter.notifyDataSetChanged();
 
         res = adapter.getRes();
-//
+
+
+
+
 
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -106,19 +106,6 @@ public class ResListActivity extends AppCompatActivity implements View.OnClickLi
                 startActivity(intent);
             }
         });
-
-
-
-
-
-
-
-
-
-
-
-
-
 
         BottomNavigationView navView = findViewById(R.id.nav_view);
         mTextMessage = findViewById(R.id.message);
@@ -155,14 +142,13 @@ public class ResListActivity extends AppCompatActivity implements View.OnClickLi
         });
 
 
-
-
-
-
     }
 
     @Override
     public void onClick(View v) {
+
+
+
     }
 
 }

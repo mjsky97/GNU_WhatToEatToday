@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\82108\AndroidStudioProjects\Today_7\app\src\main\AndroidManifest.xml:2:1-38:12
-INJECTED from C:\Users\82108\AndroidStudioProjects\Today_7\app\src\main\AndroidManifest.xml:2:1-38:12
-INJECTED from C:\Users\82108\AndroidStudioProjects\Today_7\app\src\main\AndroidManifest.xml:2:1-38:12
-INJECTED from C:\Users\82108\AndroidStudioProjects\Today_7\app\src\main\AndroidManifest.xml:2:1-38:12
+ADDED from C:\Users\82108\AndroidStudioProjects\Today_7\app\src\main\AndroidManifest.xml:2:1-39:12
+INJECTED from C:\Users\82108\AndroidStudioProjects\Today_7\app\src\main\AndroidManifest.xml:2:1-39:12
+INJECTED from C:\Users\82108\AndroidStudioProjects\Today_7\app\src\main\AndroidManifest.xml:2:1-39:12
+INJECTED from C:\Users\82108\AndroidStudioProjects\Today_7\app\src\main\AndroidManifest.xml:2:1-39:12
 MERGED from [com.google.android.material:material:1.2.1] C:\Users\82108\.gradle\caches\transforms-2\files-2.1\f0fa3d1be43bc23846cb0adf2eba1134\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.4] C:\Users\82108\.gradle\caches\transforms-2\files-2.1\3933e933fbdda42098858c82e2d42d29\AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.appcompat:appcompat:1.2.0] C:\Users\82108\.gradle\caches\transforms-2\files-2.1\ce85e133fb8851e9463a03f9da3a9895\AndroidManifest.xml:17:1-24:12
@@ -48,20 +48,20 @@ MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\82108\.gradle
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\82108\.gradle\caches\transforms-2\files-2.1\789f4ed491b7cc908cf3baea371009dd\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\82108\.gradle\caches\transforms-2\files-2.1\dc3f1171a8d332a3c38acf8a3cf611ba\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.annotation:annotation-experimental:1.0.0] C:\Users\82108\.gradle\caches\transforms-2\files-2.1\53b25d23965b011afccbdfa49fa78901\AndroidManifest.xml:17:1-24:12
-INJECTED from C:\Users\82108\AndroidStudioProjects\Today_7\app\src\main\AndroidManifest.xml:2:1-38:12
-INJECTED from C:\Users\82108\AndroidStudioProjects\Today_7\app\src\main\AndroidManifest.xml:2:1-38:12
-INJECTED from C:\Users\82108\AndroidStudioProjects\Today_7\app\src\main\AndroidManifest.xml:2:1-38:12
+INJECTED from C:\Users\82108\AndroidStudioProjects\Today_7\app\src\main\AndroidManifest.xml:2:1-39:12
+INJECTED from C:\Users\82108\AndroidStudioProjects\Today_7\app\src\main\AndroidManifest.xml:2:1-39:12
+INJECTED from C:\Users\82108\AndroidStudioProjects\Today_7\app\src\main\AndroidManifest.xml:2:1-39:12
 	package
 		ADDED from C:\Users\82108\AndroidStudioProjects\Today_7\app\src\main\AndroidManifest.xml:3:5-34
 		INJECTED from C:\Users\82108\AndroidStudioProjects\Today_7\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\82108\AndroidStudioProjects\Today_7\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from C:\Users\82108\AndroidStudioProjects\Today_7\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\82108\AndroidStudioProjects\Today_7\app\src\main\AndroidManifest.xml:2:1-38:12
+		ADDED from C:\Users\82108\AndroidStudioProjects\Today_7\app\src\main\AndroidManifest.xml:2:1-39:12
 		INJECTED from C:\Users\82108\AndroidStudioProjects\Today_7\app\src\main\AndroidManifest.xml
 	android:versionCode
 		INJECTED from C:\Users\82108\AndroidStudioProjects\Today_7\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\82108\AndroidStudioProjects\Today_7\app\src\main\AndroidManifest.xml:2:1-38:12
+		ADDED from C:\Users\82108\AndroidStudioProjects\Today_7\app\src\main\AndroidManifest.xml:2:1-39:12
 		INJECTED from C:\Users\82108\AndroidStudioProjects\Today_7\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from C:\Users\82108\AndroidStudioProjects\Today_7\app\src\main\AndroidManifest.xml:2:11-69
@@ -84,7 +84,7 @@ ADDED from C:\Users\82108\AndroidStudioProjects\Today_7\app\src\main\AndroidMani
 	android:name
 		ADDED from C:\Users\82108\AndroidStudioProjects\Today_7\app\src\main\AndroidManifest.xml:8:22-76
 application
-ADDED from C:\Users\82108\AndroidStudioProjects\Today_7\app\src\main\AndroidManifest.xml:11:5-36:19
+ADDED from C:\Users\82108\AndroidStudioProjects\Today_7\app\src\main\AndroidManifest.xml:11:5-37:19
 MERGED from [com.google.android.material:material:1.2.1] C:\Users\82108\.gradle\caches\transforms-2\files-2.1\f0fa3d1be43bc23846cb0adf2eba1134\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.2.1] C:\Users\82108\.gradle\caches\transforms-2\files-2.1\f0fa3d1be43bc23846cb0adf2eba1134\AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.4] C:\Users\82108\.gradle\caches\transforms-2\files-2.1\3933e933fbdda42098858c82e2d42d29\AndroidManifest.xml:9:5-20
@@ -157,6 +157,10 @@ activity#com.example.today_7.ResListSearchActivity
 ADDED from C:\Users\82108\AndroidStudioProjects\Today_7\app\src\main\AndroidManifest.xml:35:9-58
 	android:name
 		ADDED from C:\Users\82108\AndroidStudioProjects\Today_7\app\src\main\AndroidManifest.xml:35:19-56
+activity#com.example.today_7.ResListRandomActivity
+ADDED from C:\Users\82108\AndroidStudioProjects\Today_7\app\src\main\AndroidManifest.xml:36:9-58
+	android:name
+		ADDED from C:\Users\82108\AndroidStudioProjects\Today_7\app\src\main\AndroidManifest.xml:36:19-56
 uses-sdk
 INJECTED from C:\Users\82108\AndroidStudioProjects\Today_7\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\82108\AndroidStudioProjects\Today_7\app\src\main\AndroidManifest.xml

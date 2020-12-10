@@ -1,0 +1,3 @@
+module WhatToEatToday {
+	requires junit;
+}
